@@ -19,7 +19,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: run radon
       run: |
-        radon cc -as ./*  | sed 's/\x1b\[[0-9;]*m//g'
+        radon cc -a ./*
     - name: Lint with flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
