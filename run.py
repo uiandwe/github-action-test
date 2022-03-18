@@ -1,8 +1,8 @@
 #!/usr/bin/env Python
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
-def solution(bishops):
 
+
+def solution(bishops):
     if not bishops:
         return 64
 
@@ -19,8 +19,8 @@ def solution(bishops):
 
         for i in range(width):
             for j in range(4):
-                temp_x = b_x + (position[j][1]*i)
-                temp_y = b_y + (position[j][0]*i)
+                temp_x = b_x + (position[j][1] * i)
+                temp_y = b_y + (position[j][0] * i)
 
                 if -1 < temp_x < width and -1 < temp_y < width and d[temp_y][temp_x] == 0:
                     d[temp_y][temp_x] = 1
@@ -31,7 +31,6 @@ def solution(bishops):
                 answer += 1
 
     return answer
-
 
 
 def test_solution():
